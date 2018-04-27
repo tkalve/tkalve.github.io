@@ -1,0 +1,34 @@
+body {
+    background: #000;
+    margin: 0;
+    height: 100%;
+}
+body.p {
+    background: #000;
+}
+body.b {
+    background: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.number {
+    font-family: monospace;
+    font-size: 30vw;
+    font-weight: bold;
+}
+body.p .number {
+    color: #fff;
+}
+body.b .number {
+    color: #ff6400;
+}
