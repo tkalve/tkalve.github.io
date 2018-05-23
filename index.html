@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>tkalve.no</title>
+    <title>Thomas Kalve</title>
 
     <link rel="stylesheet" type="text/css" href="tkalve.css" />
 </head>
@@ -15,6 +15,26 @@
     <div class="container">
         <span class="number">
         </span>
+        <div class="contact">
+            <h1>Thomas Kalve</h1>
+            <dl>
+                <dt>E-post (jobb)</dt>
+                <dd>
+                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf.xnyir@obhirg.ab</a>
+                </dd>
+
+                <dt>E-post (privat)</dt>
+                <dd>
+                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf@gxnyir.ab</a>
+                </dd>
+
+                <dt>Telefon</dt>
+                <dd><a href="tel:+4745225247">+47 452 25 247</a></dd>
+
+                <dt>Github</dt>
+                <dd><a href="https://github.com/tkalve">@tkalve</a></dd>
+            </dl>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
@@ -32,6 +52,7 @@
 
         $(".number").html(count);
         $("body").toggleClass("b", count === 0).toggleClass("p", count !== 0);
+        $(".rot").each(function(){var t=$(this).html().replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});$(this).html(t),$(this).attr("href","mailto:"+t),$(this).attr("title","")});
     </script>
 
 </body>

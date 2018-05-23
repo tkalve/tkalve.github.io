@@ -26,9 +26,66 @@ body.b {
     font-size: 30vw;
     font-weight: bold;
 }
+.contact {
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    text-align: center;
+    color: #ff6400;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+dl {
+    margin: 0;
+}
+dl dt {
+    font-weight: bold;
+}
+@media (max-width: 479px) {
+    dl dt:after {
+        content: ":"
+    }
+    dl dd {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 480px) {
+
+    dl dt, dl dd {
+        float: left;
+        margin-bottom: 5px;
+    }
+    dl dt {
+        clear: both;
+        width: 150px;
+        text-align: right;
+    }
+    dl dd {
+        margin: 0;
+        margin-left: 30px;
+        clear: right;
+    }
+    dl dd:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
 body.p .number {
     color: #fff;
 }
+body.p .contact {
+    display: none;
+}
 body.b .number {
+    display: none;
     color: #ff6400;
 }
