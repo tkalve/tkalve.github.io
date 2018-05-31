@@ -72,7 +72,7 @@
     */
     
         var exclude = [1525125600000, 1525989600000, 1526508000000, 1526594400000, 1526853600000, 1527199200000], count = 0;
-        for (var d = new Date(2018, 3, 1); d < new Date(2018, 5, 1); d.setDate(d.getDate() + 1))
+        for (var d = new Date(2018, 3, 1); d < new Date(2018, 5, 2); d.setDate(d.getDate() + 1))
             if (!exclude.includes(d.getTime()) && d.getDay() !== 0 && d.getDay() !== 6 && d > new Date()) count++;
 
         $(".number").html(count);
