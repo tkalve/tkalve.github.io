@@ -1,13 +1,7 @@
 body {
-    background: #000;
+    background: #fff;
     margin: 0;
     height: 100%;
-}
-body.p {
-    background: #000;
-}
-body.b {
-    background: #fff;
 }
 
 .container {
@@ -21,11 +15,6 @@ body.b {
     right: 0;
 }
 
-.number {
-    font-family: monospace;
-    font-size: 30vw;
-    font-weight: bold;
-}
 .contact {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -77,15 +66,4 @@ dl dt {
         display:table;
         clear:both;
     }
-}
-
-body.p .number {
-    color: #fff;
-}
-body.p .contact {
-    display: none;
-}
-body.b .number {
-    display: none;
-    color: #ff6400;
 }

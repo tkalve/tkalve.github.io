@@ -43,11 +43,14 @@
 <body>
 
     <div class="container">
-        <span class="number">
-        </span>
         <div class="contact">
             <h1>Thomas Kalve</h1>
             <dl>
+                <dt>E-post (jobb)</dt>
+                <dd>
+                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf.xnyir@obhirg.ab</a>
+                </dd>
+
                 <dt>E-post (privat)</dt>
                 <dd>
                     <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf@gxnyir.ab</a>
@@ -64,19 +67,12 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    /*
-               _
-           .__(.)< (mjau)
-            \___)
-        ~~~~~~~~~~~~~~~~~~
-    */
-    
-        var exclude = [1525125600000, 1525989600000, 1526508000000, 1526594400000, 1526853600000, 1527199200000], count = 0;
-        for (var d = new Date(2018, 3, 1); d < new Date(2018, 5, 1); d.setDate(d.getDate() + 1))
-            if (!exclude.includes(d.getTime()) && d.getDay() !== 0 && d.getDay() !== 6 && d > new Date()) count++;
-
-        $(".number").html(count);
-        $("body").toggleClass("b", count === 0).toggleClass("p", count !== 0);
+        /*
+                _
+            .__(.)< (mjau)
+                \___)
+            ~~~~~~~~~~~~~~~~~~
+        */
         $(".rot").each(function(){var t=$(this).html().replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});$(this).html(t),$(this).attr("href","mailto:"+t),$(this).attr("title","")});
     </script>
 
