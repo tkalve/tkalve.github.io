@@ -43,17 +43,17 @@
 <body>
 
     <div class="container">
-        <div class="contact">
-            <h1>Thomas Kalve</h1>
+        <div class="contact"  itemscope itemtype="http://schema.org/Person">
+            <h1 itemprop="name">Thomas Kalve</h1>
             <dl>
                 <dt>E-post (jobb)</dt>
                 <dd>
-                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf.xnyir@obhirg.ab</a>
+                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen"  itemprop="email">gubznf.xnyir@obhirg.ab</a>
                 </dd>
 
                 <dt>E-post (privat)</dt>
                 <dd>
-                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf@gxnyir.ab</a>
+                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen"  itemprop="email">gubznf@gxnyir.ab</a>
                 </dd>
 
                 <dt>Telefon</dt>
@@ -68,9 +68,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
         /*
-                _
-            .__(.)< (mjau)
-                \___)
+               _
+           .__(.)< (mjau)
+            \___)
             ~~~~~~~~~~~~~~~~~~
         */
         $(".rot").each(function(){var t=$(this).html().replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});$(this).html(t),$(this).attr("href","mailto:"+t),$(this).attr("title","")});
