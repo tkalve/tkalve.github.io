@@ -1,0 +1,14 @@
+
+.container {
+}
+
+table {
+    width: 100%;
+}
+table.letemodell {
+    width: auto;
+}
+
+th span {
+    white-space: nowrap;
+}
