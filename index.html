@@ -12,6 +12,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-scrc: 'self' 'unsafe-inline' www.googletagmanager.com">
 
     <title>Thomas Kalve</title>
 
@@ -45,7 +46,7 @@
     <div class="container">
         <div class="contact"  itemscope itemtype="http://schema.org/Person">
             <h1 itemprop="name">Thomas Kalve</h1>
-            <dl>
+            <dl id="list">
                 <dt>E-post (jobb)</dt>
                 <dd itemprop="email" content="&#x74;&#x68;&#x6F;&#x6D;&#x61;&#x73;&#x2E;&#x6B;&#x61;&#x6C;&#x76;&#x65;&#x40;&#x62;&#x6F;&#x75;&#x76;&#x65;&#x74;&#x2E;&#x6E;&#x6F;">
                     <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf.xnyir@obhirg.ab</a>
@@ -64,8 +65,6 @@
             </dl>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
         /*
                _
@@ -73,7 +72,32 @@
             \___)
             ~~~~~~~~~~~~~~~~~~
         */
-        $(".rot").each(function(){var t=$(this).html().replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});$(this).html(t),$(this).attr("href","mailto:"+t),$(this).attr("title","")});
+        Array.prototype.forEach.call(document.getElementsByClassName("rot"), function(el) {
+            console.log(el.innerHTML);
+            var t=el.innerHTML.replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});
+            el.innerHTML = t;
+            el.setAttribute("href", "mailto:"+t);
+            el.setAttribute("title", "");
+        });
+            
+        if ( window.addEventListener ) {
+            var kkeys = [], k = "38,38,40,40,37,39,37,39,66,65";
+            window.addEventListener("keydown", function(e){
+                kkeys.push( e.keyCode );
+                if ( kkeys.toString().indexOf( k ) >= 0) {
+                    var div = document.getElementsByTagName('dl')[0];
+                    if (document.getElementsByClassName("k").length == 0) {
+                        div.innerHTML += '<qg pynff="zg x">VEP</qg><qq pynff="zg x">gxnyir @ serrabqr / rsarg<qq><qg pynff="x">Snprobbx</qg><qq pynff="x"><n uers="uggcf://jjj.snprobbx.pbz/gxnyir">uggcf://jjj.snprobbx.pbz/gxnyir</n></qq>'.replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});
+                    } else {
+                        var elements = document.getElementsByClassName("k");
+                        while(elements.length > 0){
+                            elements[0].parentNode.removeChild(elements[0]);
+                        }
+                    }
+                    kkeys = [];
+                }
+            }, true);
+        }
     </script>
 
 </body>

@@ -18,9 +18,13 @@ body {
 .contact {
     font-family: 'Courier New', Courier, monospace;
 }
-h1 {
+.contact h1 {
     text-align: center;
     color: #ff6400;
+}
+main {
+    font-family: 'Calibri', sans-serif;
+    margin: 2em;
 }
 
 a {
@@ -35,6 +39,9 @@ dl {
 }
 dl dt {
     font-weight: bold;
+}
+.mt {
+    margin-top: 10px;
 }
 @media (max-width: 479px) {
     dl dt:after {
