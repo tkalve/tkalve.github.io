@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; img-src 'self' www.google-analytics.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; img-src 'self' www.google-analytics.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com">
 
     <title>Thomas Kalve</title>
 
@@ -38,6 +38,7 @@
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="tkalve.css" />
 </head>
 
@@ -48,57 +49,29 @@
             <h1 itemprop="name">Thomas Kalve</h1>
             <dl id="list">
                 <dt>E-post (jobb)</dt>
-                <dd itemprop="email" content="&#x74;&#x68;&#x6F;&#x6D;&#x61;&#x73;&#x2E;&#x6B;&#x61;&#x6C;&#x76;&#x65;&#x40;&#x62;&#x6F;&#x75;&#x76;&#x65;&#x74;&#x2E;&#x6E;&#x6F;">
-                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf.xnyir@obhirg.ab</a>
+                <dd itemprop="email" content="thomas.kalve@bouvet.no">
+                    <a href="mailto:thomas.kalve@bouvet.no">thomas.kalve@bouvet.no</a>
                 </dd>
 
                 <dt>E-post (privat)</dt>
-                <dd itemprop="email" content="&#x74;&#x68;&#x6F;&#x6D;&#x61;&#x73;&#x40;&#x74;&#x6B;&#x61;&#x6C;&#x76;&#x65;&#x2E;&#x6E;&#x6F;">
-                    <a class="rot" title="Roter hver bokstav 13 plasser for å finne e-postadressen">gubznf@gxnyir.ab</a>
+                <dd itemprop="email" content="thomas@tkalve.no">
+                    <a href="mailto:thomas@tkalve.no">thomas@tkalve.no</a>
                 </dd>
 
                 <dt>Telefon</dt>
                 <dd itemprop="telephone" content="+4745225247"><a href="tel:+4745225247">+47 452 25 247</a></dd>
 
-                <dt>Github</dt>
-                <dd><a href="https://github.com/tkalve">@tkalve</a></dd>
+                <dt class="mt">Facebook</dt>
+                <dd class="mt"><a itemprop="sameAs" href="https://facebook.com/tkalve">Thomas Kalve</a></dd>
+
+                <dt>Instagram</dt>
+                <dd><a itemprop="sameAs" href="https://instagram.com/tkalve">@tkalve</a></dd>
+
+                <dt>GitHub</dt>
+                <dd><a itemprop="sameAs" href="https://github.com/tkalve">@tkalve</a></dd>
             </dl>
         </div>
     </div>
-    <script type="text/javascript">
-        /*
-               _
-           .__(.)< (mjau)
-            \___)
-            ~~~~~~~~~~~~~~~~~~
-        */
-        Array.prototype.forEach.call(document.getElementsByClassName("rot"), function(el) {
-            console.log(el.innerHTML);
-            var t=el.innerHTML.replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});
-            el.innerHTML = t;
-            el.setAttribute("href", "mailto:"+t);
-            el.setAttribute("title", "");
-        });
-            
-        if ( window.addEventListener ) {
-            var kkeys = [], k = "38,38,40,40,37,39,37,39,66,65";
-            window.addEventListener("keydown", function(e){
-                kkeys.push( e.keyCode );
-                if ( kkeys.toString().indexOf( k ) >= 0) {
-                    var div = document.getElementsByTagName('dl')[0];
-                    if (document.getElementsByClassName("k").length == 0) {
-                        div.innerHTML += '<qg pynff="zg x">VEP</qg><qq pynff="zg x">gxnyir @ serrabqr / rsarg<qq><qg pynff="x">Snprobbx</qg><qq pynff="x"><n uers="uggcf://jjj.snprobbx.pbz/gxnyir">uggcf://jjj.snprobbx.pbz/gxnyir</n></qq>'.replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});
-                    } else {
-                        var elements = document.getElementsByClassName("k");
-                        while(elements.length > 0){
-                            elements[0].parentNode.removeChild(elements[0]);
-                        }
-                    }
-                    kkeys = [];
-                }
-            }, true);
-        }
-    </script>
 
 </body>
 </html>

@@ -1,7 +1,20 @@
+:root {
+    --dark-color: #4c495a; 
+    --main-color: #c06c84;
+    --grey: #ececee;
+    --light-grey: #fdfdfd;
+}
+
 body {
-    background: #fff;
+    background: var(--dark-color);
+    color: var(--grey);
     margin: 0;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Baloo', cursive;
+    font-weight: 400;
 }
 
 .container {
@@ -15,20 +28,16 @@ body {
     right: 0;
 }
 
-.contact {
-    font-family: 'Courier New', Courier, monospace;
-}
 .contact h1 {
     text-align: center;
-    color: #ff6400;
+    color: var(--main-color);
 }
 main {
-    font-family: 'Calibri', sans-serif;
     margin: 2em;
 }
 
 a {
-    color: black;
+    color: var(--light);
     text-decoration: none;
 }
 a:hover {
@@ -72,5 +81,18 @@ dl dt {
         content:"";
         display:table;
         clear:both;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+      background-color: var(--light-grey);
+      color: var(--dark-color);
+    }
+    .contact h1 {
+        color: var(--main-color);
+    }
+    a {
+        color: var(--dark-color);
     }
 }
