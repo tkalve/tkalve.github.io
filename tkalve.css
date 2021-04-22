@@ -1,98 +1,108 @@
+/** @format */
+
 :root {
-    --dark-color: #4c495a; 
-    --main-color: #c06c84;
-    --grey: #ececee;
-    --light-grey: #fdfdfd;
+  --dark-color: #4c495a;
+  --main-color: #c06c84;
+  --grey: #ececee;
+  --light-grey: #fdfdfd;
 }
 
 body {
-    background: var(--dark-color);
-    color: var(--grey);
-    margin: 0;
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
+  background: var(--dark-color);
+  color: var(--grey);
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
 }
-h1, h2, h3 {
-    font-family: 'Baloo', cursive;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+  font-family: "Baloo", cursive;
+  font-weight: 400;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .contact h1 {
-    text-align: center;
-    color: var(--main-color);
+  text-align: center;
+  color: var(--main-color);
 }
 main {
-    margin: 2em;
+  margin: 2em;
 }
 
 a {
-    color: var(--light);
-    text-decoration: none;
+  color: var(--light);
+  text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 dl {
-    margin: 0;
+  margin: 0;
 }
 dl dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 .mt {
-    margin-top: 10px;
+  margin-top: 10px;
 }
+
+p {
+  clear: both;
+  margin-top: 40px;
+}
+
 @media (max-width: 479px) {
-    dl dt:after {
-        content: ":"
-    }
-    dl dd {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  dl dt:after {
+    content: ":";
+  }
+  dl dd {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
 @media (min-width: 480px) {
-
-    dl dt, dl dd {
-        float: left;
-        margin-bottom: 5px;
-    }
-    dl dt {
-        clear: both;
-        width: 150px;
-        text-align: right;
-    }
-    dl dd {
-        margin: 0;
-        margin-left: 30px;
-        clear: right;
-    }
-    dl dd:after {
-        content:"";
-        display:table;
-        clear:both;
-    }
+  dl dt,
+  dl dd {
+    float: left;
+    margin-bottom: 5px;
+  }
+  dl dt {
+    clear: both;
+    width: 150px;
+    text-align: right;
+  }
+  dl dd {
+    margin: 0;
+    margin-left: 30px;
+    clear: right;
+  }
+  dl dd:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @media screen and (prefers-color-scheme: light) {
-    body {
-      background-color: var(--light-grey);
-      color: var(--dark-color);
-    }
-    .contact h1 {
-        color: var(--main-color);
-    }
-    a {
-        color: var(--dark-color);
-    }
+  body {
+    background-color: var(--light-grey);
+    color: var(--dark-color);
+  }
+  .contact h1 {
+    color: var(--main-color);
+  }
+  a {
+    color: var(--dark-color);
+  }
 }

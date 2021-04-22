@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Thomas Kalve</title>
+
+  <link rel="stylesheet" type="text/css" href="./tkalve.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="contact">
+      <h1>Thomas Kalve</h1>
+      <dl>
+        <dt>E-post (jobb)</dt>
+        <dd>
+          <a class="rot" title="" href="mailto:">gubznf.xnyir@obhirg.ab</a>
+        </dd>
+
+        <dt>E-post (privat)</dt>
+        <dd>
+            <a class="rot" title="" href="mailto:">gubznf.xnyir@vpybhq.pbz</a>
+        </dd>
+
+        <dt>Telefon</dt>
+        <dd><a href="http://web.archive.org/web/20180830150206/tel:+4745225247">+47 452 25 247</a></dd>
+
+        <dt>Github</dt>
+        <dd><a href="http://web.archive.org/web/20180830150206/https://github.com/tkalve">@tkalve</a></dd>
+      </dl>
+    </div>
+  </div>
+
+  <script src="./jquery-1.12.4.min.js" integrity="" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+      /*
+              _
+          .__(.)< (mjau)
+          \___)
+      ~~~~~~~~~~~~~~~~~~
+      */
+      $(".rot").each(function(){var t=$(this).html().replace(/[a-zA-Z]/g,function(t){return String.fromCharCode((t<="Z"?90:122)>=(t=t.charCodeAt(0)+13)?t:t-26)});$(this).html(t),$(this).attr("href","mailto:"+t),$(this).attr("title","")});
+  </script>
+
+</body>
+</html>
