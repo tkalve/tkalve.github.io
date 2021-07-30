@@ -1,10 +1,10 @@
 /** @format */
 
 :root {
-  --dark-color: #4c495a;
-  --main-color: #c06c84;
+  --dark-color: #465e73;
+  --main-color: #bfd9c3;
   --grey: #ececee;
-  --light-grey: #fdfdfd;
+  --light-grey: #f2f2f2;
 }
 
 body {
@@ -12,12 +12,13 @@ body {
   color: var(--grey);
   margin: 0;
   height: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 h1,
 h2,
 h3 {
-  font-family: "Baloo", cursive;
+  font-family: "Palanquin Dark", sans-serif;
   font-weight: 400;
 }
 
